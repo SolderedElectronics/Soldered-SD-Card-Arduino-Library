@@ -28,6 +28,6 @@
  * \file
  * \brief FsLib include file.
  */
-#include "FsVolume.h"
 #include "FsFile.h"
-#endif  // FsLib_h
+#include "FsVolume.h"
+#endif // FsLib_h

@@ -23,11 +23,11 @@
  * DEALINGS IN THE SOFTWARE.
  */
 #ifndef BlockDevice_h
-#define  BlockDevice_h
+#define BlockDevice_h
 #include "SdCard/SdCard.h"
 #if HAS_SDIO_CLASS || USE_BLOCK_DEVICE_INTERFACE
 typedef BlockDeviceInterface BlockDevice;
 #else
 typedef SdCard BlockDevice;
 #endif
-#endif  // BlockDevice_h
+#endif // BlockDevice_h

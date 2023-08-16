@@ -29,4 +29,4 @@
 #ifndef FatLibConfig_h
 #define FatLibConfig_h
 #include "SdFatConfig.h"
-#endif  // FatLibConfig_h
+#endif // FatLibConfig_h
