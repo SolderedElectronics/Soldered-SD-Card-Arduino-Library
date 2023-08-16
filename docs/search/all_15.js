@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['v1_0',['v1',['../unioncsd__t.html#acb1d09f122f32629d8d6faa9edcc943b',1,'csd_t']]],
+  ['v2_1',['v2',['../unioncsd__t.html#a19b60555856c9a485bcf4a84c248bfea',1,'csd_t']]],
+  ['val_2',['val',['../structpair16.html#a878ff9fb8d30fa9a1f8e72c22cfae5be',1,'pair16']]],
+  ['validlength_3',['validLength',['../struct_dir_stream__t.html#a962aaf56000250e5ff8cf3a133b8a064',1,'DirStream_t::validLength'],['../class_ex_fat_file.html#a9b299ba77e9287c74ce08b217a1bff44',1,'ExFatFile::validLength()']]],
+  ['value_4',['value',['../group__digital_pin.html#ga0376be5904d0dd864b7d97c9ce1295ab',1,'DigitalPin.h']]],
+  ['vdd_5fr_5fcurr_5fmax_5',['vdd_r_curr_max',['../struct_c_s_d_v1.html#a725ed46d1612c0b4aa8dee1d245f9ad0',1,'CSDV1::vdd_r_curr_max'],['../_sd_card_info_8h.html#a68aafd29ea70955c274ebeb0364b4033',1,'vdd_r_curr_max:&#160;SdCardInfo.h']]],
+  ['vdd_5fr_5fcurr_5fmin_6',['vdd_r_curr_min',['../struct_c_s_d_v1.html#a5ab4d0a666a5fdccca2f192d2e530c54',1,'CSDV1::vdd_r_curr_min'],['../_sd_card_info_8h.html#a0e5dbcfa1434c0d43a5f71067b54377a',1,'vdd_r_curr_min:&#160;SdCardInfo.h']]],
+  ['vdd_5fw_5fcur_5fmax_7',['vdd_w_cur_max',['../struct_c_s_d_v1.html#a9333c9419f64d5c1e00ec092421d7d01',1,'CSDV1::vdd_w_cur_max'],['../_sd_card_info_8h.html#aa018db4afbad1a906ffc7c2f16e949b6',1,'vdd_w_cur_max:&#160;SdCardInfo.h']]],
+  ['vdd_5fw_5fcurr_5fmin_8',['vdd_w_curr_min',['../_sd_card_info_8h.html#a17680224cd64eb6021437f4955b6392b',1,'vdd_w_curr_min:&#160;SdCardInfo.h'],['../struct_c_s_d_v1.html#a4af15d4957c333d9546c164991f88578',1,'CSDV1::vdd_w_curr_min']]],
+  ['videospeed_9',['videoSpeed',['../struct_sd_status.html#a39be544d5edad426610637b3733b8df1',1,'SdStatus']]],
+  ['vol_10',['vol',['../class_sd_base.html#ac527c2821cb72c5373c743c8440b83b6',1,'SdBase']]],
+  ['volume_11',['volume',['../class_ex_fat_file.html#aea83233eb36c4346f224e6065d7d65dd',1,'ExFatFile']]],
+  ['volumebegin_12',['volumeBegin',['../class_sd_base.html#a1f1de2aac5384475b67506f86199e4c8',1,'SdBase']]],
+  ['volumeflags_13',['volumeFlags',['../structbios_parameter_block_ex_fat.html#a025ed9321ba3ef1b6380b7469369a594',1,'biosParameterBlockExFat']]],
+  ['volumelabel_14',['volumeLabel',['../structbios_parameter_block_fat16.html#a5fe19b67b4fe62a7ed43ef87e10a2bc1',1,'biosParameterBlockFat16::volumeLabel'],['../structbios_parameter_block_fat32.html#ac91ab16cf6c4cde0d0817b456eede1ce',1,'biosParameterBlockFat32::volumeLabel']]],
+  ['volumelength_15',['volumeLength',['../structbios_parameter_block_ex_fat.html#abc157aca10ee0ed1abef3e46c9196261',1,'biosParameterBlockExFat']]],
+  ['volumesectorcount_16',['volumeSectorCount',['../class_fat_partition.html#a916ba7d67711bb62daf12ecd47ca4b8e',1,'FatPartition']]],
+  ['volumeserialnumber_17',['volumeSerialNumber',['../structbios_parameter_block_ex_fat.html#a66ecb975f6001e671921932e6c1683f3',1,'biosParameterBlockExFat::volumeSerialNumber'],['../structbios_parameter_block_fat32.html#a18deed68924978fad173c7a68da1dd1e',1,'biosParameterBlockFat32::volumeSerialNumber'],['../structbios_parameter_block_fat16.html#acd34c4698499cd5ee3097e61cc3a4462',1,'biosParameterBlockFat16::volumeSerialNumber']]],
+  ['volumetype_18',['volumeType',['../structbios_parameter_block_fat16.html#a7fd61561bf1ee5edafb676c0f80655e7',1,'biosParameterBlockFat16::volumeType'],['../structbios_parameter_block_fat32.html#a27d04c19f5fa49c0493690ec4ea1cb11',1,'biosParameterBlockFat32::volumeType']]],
+  ['vscausize_19',['vscAuSize',['../struct_sd_status.html#ad8413fddb95896927b9f0c1a86fed1b5',1,'SdStatus']]],
+  ['vwd_20',['vwd',['../class_ex_fat_volume.html#a375166a5ed2d6085efd5189b43fd7251',1,'ExFatVolume::vwd()'],['../class_fat_volume.html#a45434c8a4907ceaf9f7c8dac7fcfddd1',1,'FatVolume::vwd()']]]
+];

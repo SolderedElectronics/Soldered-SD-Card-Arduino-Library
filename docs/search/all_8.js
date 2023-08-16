@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['readdata_0',['readData',['../class_easy_c.html#a9a3d39be50b348768bc4b5dea3dae01a',1,'EasyC']]],
-  ['readme_2emd_1',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readregister_2',['readRegister',['../class_easy_c.html#a45bd6c915c1fa0998e273f69ee2d2376',1,'EasyC']]]
+  ['halt_0',['halt',['../class_sys_call.html#a9b1ef8900e97f572ca561760b4dd4191',1,'SysCall']]],
+  ['headcount_1',['headCount',['../structbios_parameter_block_fat16.html#af31d201cf26755d1526a538aad0989f6',1,'biosParameterBlockFat16::headCount'],['../structbios_parameter_block_fat32.html#ae310fddf3b2e65db787126c58592c988',1,'biosParameterBlockFat32::headCount']]],
+  ['hex_2',['hex',['../classios__base.html#a3608e51eb0a80ea94ddadd5b713a3750',1,'ios_base::hex'],['../ios_8h.html#a7bb2c9b489ecd6379fc33328a58c4a18',1,'hex():&#160;ios.h']]],
+  ['hidddensectors_3',['hidddenSectors',['../structbios_parameter_block_fat16.html#a81b3260cd603486a4dcdb17856287338',1,'biosParameterBlockFat16::hidddenSectors'],['../structbios_parameter_block_fat32.html#ac9e83d08bfe70a103887277d1a293d47',1,'biosParameterBlockFat32::hidddenSectors']]]
 ];
