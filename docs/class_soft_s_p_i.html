@@ -707,11 +707,12 @@ template&lt;uint8_t MisoPin, uint8_t MosiPin, uint8_t SckPin, uint8_t Mode = 0&g
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (MODE_CPHA(Mode)) {</div>
-<div class="line">      <a class="code hl_function" href="class_soft_s_p_i.html#a59c23ff8f54fc487f8276493a4385298">fastDigitalWrite</a>(SckPin, !MODE_CPOL(Mode));</div>
-<div class="line">    }</div>
-<div class="line">    <a class="code hl_variable" href="class_soft_s_p_i.html#a2a8036676a59cf9d4882f442ab565149">nop</a></div>
-<div class="ttc" id="aclass_soft_s_p_i_html_a2a8036676a59cf9d4882f442ab565149"><div class="ttname"><a href="class_soft_s_p_i.html#a2a8036676a59cf9d4882f442ab565149">SoftSPI::nop</a></div><div class="ttdeci">nop</div><div class="ttdef"><b>Definition</b> SoftSPI.h:121</div></div>
+<div class="line">        <span class="keywordflow">if</span> (MODE_CPHA(Mode))</div>
+<div class="line">        {</div>
+<div class="line">            <a class="code hl_function" href="class_soft_s_p_i.html#a59c23ff8f54fc487f8276493a4385298">fastDigitalWrite</a>(SckPin, !MODE_CPOL(Mode));</div>
+<div class="line">        }</div>
+<div class="line">        <a class="code hl_variable" href="class_soft_s_p_i.html#a2a8036676a59cf9d4882f442ab565149">nop</a></div>
+<div class="ttc" id="aclass_soft_s_p_i_html_a2a8036676a59cf9d4882f442ab565149"><div class="ttname"><a href="class_soft_s_p_i.html#a2a8036676a59cf9d4882f442ab565149">SoftSPI::nop</a></div><div class="ttdeci">nop</div><div class="ttdef"><b>Definition</b> SoftSPI.h:127</div></div>
 <div class="ttc" id="aclass_soft_s_p_i_html_a59c23ff8f54fc487f8276493a4385298"><div class="ttname"><a href="class_soft_s_p_i.html#a59c23ff8f54fc487f8276493a4385298">SoftSPI::fastDigitalWrite</a></div><div class="ttdeci">fastDigitalWrite(SckPin, MODE_CPHA(Mode) ? MODE_CPOL(Mode) :!MODE_CPOL(Mode))</div></div>
 </div><!-- fragment -->
 </div>
@@ -738,11 +739,12 @@ template&lt;uint8_t MisoPin, uint8_t MosiPin, uint8_t SckPin, uint8_t Mode = 0&g
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (MODE_CPHA(Mode)) {</div>
-<div class="line">      <a class="code hl_function" href="class_soft_s_p_i.html#a59c23ff8f54fc487f8276493a4385298">fastDigitalWrite</a>(SckPin, !MODE_CPOL(Mode));</div>
-<div class="line">    }</div>
-<div class="line">    <a class="code hl_function" href="class_soft_s_p_i.html#a59c23ff8f54fc487f8276493a4385298">fastDigitalWrite</a>(MosiPin, <a class="code hl_variable" href="class_soft_s_p_i.html#a6ad1ab8969743211a63fac715d64be75">data</a> &amp; (1 &lt;&lt; bit))</div>
-<div class="ttc" id="aclass_soft_s_p_i_html_a6ad1ab8969743211a63fac715d64be75"><div class="ttname"><a href="class_soft_s_p_i.html#a6ad1ab8969743211a63fac715d64be75">SoftSPI::data</a></div><div class="ttdeci">uint8_t * data</div><div class="ttdef"><b>Definition</b> SoftSPI.h:116</div></div>
+<div class="line">        <span class="keywordflow">if</span> (MODE_CPHA(Mode))</div>
+<div class="line">        {</div>
+<div class="line">            <a class="code hl_function" href="class_soft_s_p_i.html#a59c23ff8f54fc487f8276493a4385298">fastDigitalWrite</a>(SckPin, !MODE_CPOL(Mode));</div>
+<div class="line">        }</div>
+<div class="line">        <a class="code hl_function" href="class_soft_s_p_i.html#a59c23ff8f54fc487f8276493a4385298">fastDigitalWrite</a>(MosiPin, <a class="code hl_variable" href="class_soft_s_p_i.html#a6ad1ab8969743211a63fac715d64be75">data</a> &amp; (1 &lt;&lt; bit))</div>
+<div class="ttc" id="aclass_soft_s_p_i_html_a6ad1ab8969743211a63fac715d64be75"><div class="ttname"><a href="class_soft_s_p_i.html#a6ad1ab8969743211a63fac715d64be75">SoftSPI::data</a></div><div class="ttdeci">uint8_t * data</div><div class="ttdef"><b>Definition</b> SoftSPI.h:121</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -816,11 +818,12 @@ template&lt;uint8_t MisoPin, uint8_t MosiPin, uint8_t SckPin, uint8_t Mode = 0&g
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (MODE_CPHA(Mode)) {</div>
-<div class="line">      <a class="code hl_function" href="class_soft_s_p_i.html#a59c23ff8f54fc487f8276493a4385298">fastDigitalWrite</a>(SckPin, !MODE_CPOL(Mode));</div>
-<div class="line">    }</div>
-<div class="line">    <a class="code hl_function" href="class_soft_s_p_i.html#a59c23ff8f54fc487f8276493a4385298">fastDigitalWrite</a>(MosiPin, <a class="code hl_variable" href="class_soft_s_p_i.html#a54a83bfd9cd526b05887c167a8265ba2">txData</a> &amp; (1 &lt;&lt; bit))</div>
-<div class="ttc" id="aclass_soft_s_p_i_html_a54a83bfd9cd526b05887c167a8265ba2"><div class="ttname"><a href="class_soft_s_p_i.html#a54a83bfd9cd526b05887c167a8265ba2">SoftSPI::txData</a></div><div class="ttdeci">uint8_t uint8_t txData</div><div class="ttdef"><b>Definition</b> SoftSPI.h:146</div></div>
+<div class="line">        <span class="keywordflow">if</span> (MODE_CPHA(Mode))</div>
+<div class="line">        {</div>
+<div class="line">            <a class="code hl_function" href="class_soft_s_p_i.html#a59c23ff8f54fc487f8276493a4385298">fastDigitalWrite</a>(SckPin, !MODE_CPOL(Mode));</div>
+<div class="line">        }</div>
+<div class="line">        <a class="code hl_function" href="class_soft_s_p_i.html#a59c23ff8f54fc487f8276493a4385298">fastDigitalWrite</a>(MosiPin, <a class="code hl_variable" href="class_soft_s_p_i.html#a54a83bfd9cd526b05887c167a8265ba2">txData</a> &amp; (1 &lt;&lt; bit))</div>
+<div class="ttc" id="aclass_soft_s_p_i_html_a54a83bfd9cd526b05887c167a8265ba2"><div class="ttname"><a href="class_soft_s_p_i.html#a54a83bfd9cd526b05887c167a8265ba2">SoftSPI::txData</a></div><div class="ttdeci">uint8_t uint8_t txData</div><div class="ttdef"><b>Definition</b> SoftSPI.h:154</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -835,7 +838,7 @@ template&lt;uint8_t MisoPin, uint8_t MosiPin, uint8_t SckPin, uint8_t Mode = 0&g
     <ul>
         <li class="navelem"><a class="el" href="class_soft_s_p_i.html">SoftSPI</a></li>
         <li class="footer">
-            Generated on Wed Aug 16 2023 13:11:28 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
+            Generated on Wed Aug 16 2023 13:16:43 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.9.7.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.

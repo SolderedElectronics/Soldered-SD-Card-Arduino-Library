@@ -100,71 +100,86 @@ $(document).ready(function(){initNavTree('_sd_spi_lib_driver_8h_source.html','')
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifndef SdSpiLibDriver_h</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define SdSpiLibDriver_h</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_arduino_driver.html#abb6b88c5c8b87fc344a69f23f6eab3d9">SdSpiArduinoDriver::activate</a>() {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;beginTransaction(<a class="code hl_variable" href="class_sd_spi_arduino_driver.html#a5edbdabf699e1e0e4c9156e02fa1bc34">m_spiSettings</a>);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_arduino_driver.html#ae837a6d51bfe5518cb4744581824db88">SdSpiArduinoDriver::begin</a>(<a class="code hl_class" href="class_sd_spi_config.html">SdSpiConfig</a> spiConfig) {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordflow">if</span> (spiConfig.<a class="code hl_variable" href="class_sd_spi_config.html#aedaada290c35b55d36671ca377620480">spiPort</a>) {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a> = spiConfig.<a class="code hl_variable" href="class_sd_spi_config.html#aedaada290c35b55d36671ca377620480">spiPort</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#if defined(SDCARD_SPI) &amp;&amp; defined(SDCARD_SS_PIN)</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (spiConfig.<a class="code hl_variable" href="class_sd_spi_config.html#a0c1797197fbd4e4c4499daf4b51628e6">csPin</a> == SDCARD_SS_PIN) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a> = &amp;SDCARD_SPI;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif  </span><span class="comment">// defined(SDCARD_SPI) &amp;&amp; defined(SDCARD_SS_PIN)</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a> = &amp;SPI;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;begin();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_arduino_driver.html#ae88a255f533e3acb41d1221025a69b55">SdSpiArduinoDriver::deactivate</a>() {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;endTransaction();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">inline</span> uint8_t <a class="code hl_function" href="class_sd_spi_arduino_driver.html#a8d6bc852a52e9d69c4b1e48ee062e8d1">SdSpiArduinoDriver::receive</a>() {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer( 0XFF);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">inline</span> uint8_t <a class="code hl_function" href="class_sd_spi_arduino_driver.html#a8d6bc852a52e9d69c4b1e48ee062e8d1">SdSpiArduinoDriver::receive</a>(uint8_t* buf, <span class="keywordtype">size_t</span> count) {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#if USE_SPI_ARRAY_TRANSFER</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  memset(buf, 0XFF, count);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer(buf, count);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#else  </span><span class="comment">// USE_SPI_ARRAY_TRANSFER</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; count; i++) {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    buf[i] = <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer(0XFF);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif  </span><span class="comment">// USE_SPI_ARRAY_TRANSFER</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_arduino_driver.html#a3c4842e47f98fe5d3799cd6028778ab5">SdSpiArduinoDriver::send</a>(uint8_t data) {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer(data);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_arduino_driver.html#a3c4842e47f98fe5d3799cd6028778ab5">SdSpiArduinoDriver::send</a>(<span class="keyword">const</span> uint8_t* buf, <span class="keywordtype">size_t</span> count) {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#if USE_SPI_ARRAY_TRANSFER</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordflow">if</span> (count &lt;= 512) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    uint8_t tmp[count];    <span class="comment">// NOLINT</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    memcpy(tmp, buf, count);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer(tmp, count);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif  </span><span class="comment">// USE_SPI_ARRAY_TRANSFER</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; count; i++) {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer(buf[i]);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif  </span><span class="comment">// SdSpiLibDriver_h</span></div>
-<div class="ttc" id="aclass_sd_spi_arduino_driver_html_a3c4842e47f98fe5d3799cd6028778ab5"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#a3c4842e47f98fe5d3799cd6028778ab5">SdSpiArduinoDriver::send</a></div><div class="ttdeci">void send(uint8_t data)</div><div class="ttdef"><b>Definition</b> SdSpiArtemis.cpp:55</div></div>
-<div class="ttc" id="aclass_sd_spi_arduino_driver_html_a5edbdabf699e1e0e4c9156e02fa1bc34"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#a5edbdabf699e1e0e4c9156e02fa1bc34">SdSpiArduinoDriver::m_spiSettings</a></div><div class="ttdeci">SPISettings m_spiSettings</div><div class="ttdef"><b>Definition</b> SdSpiArduinoDriver.h:86</div></div>
-<div class="ttc" id="aclass_sd_spi_arduino_driver_html_a8d6bc852a52e9d69c4b1e48ee062e8d1"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#a8d6bc852a52e9d69c4b1e48ee062e8d1">SdSpiArduinoDriver::receive</a></div><div class="ttdeci">uint8_t receive()</div><div class="ttdef"><b>Definition</b> SdSpiArtemis.cpp:45</div></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_arduino_driver.html#abb6b88c5c8b87fc344a69f23f6eab3d9">SdSpiArduinoDriver::activate</a>()</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;beginTransaction(<a class="code hl_variable" href="class_sd_spi_arduino_driver.html#a5edbdabf699e1e0e4c9156e02fa1bc34">m_spiSettings</a>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_arduino_driver.html#ae837a6d51bfe5518cb4744581824db88">SdSpiArduinoDriver::begin</a>(<a class="code hl_class" href="class_sd_spi_config.html">SdSpiConfig</a> spiConfig)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span> (spiConfig.<a class="code hl_variable" href="class_sd_spi_config.html#aedaada290c35b55d36671ca377620480">spiPort</a>)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a> = spiConfig.<a class="code hl_variable" href="class_sd_spi_config.html#aedaada290c35b55d36671ca377620480">spiPort</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#if defined(SDCARD_SPI) &amp;&amp; defined(SDCARD_SS_PIN)</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (spiConfig.<a class="code hl_variable" href="class_sd_spi_config.html#a0c1797197fbd4e4c4499daf4b51628e6">csPin</a> == SDCARD_SS_PIN)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a> = &amp;SDCARD_SPI;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif </span><span class="comment">// defined(SDCARD_SPI) &amp;&amp; defined(SDCARD_SS_PIN)</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a> = &amp;SPI;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;begin();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_arduino_driver.html#ae88a255f533e3acb41d1221025a69b55">SdSpiArduinoDriver::deactivate</a>()</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;endTransaction();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">inline</span> uint8_t <a class="code hl_function" href="class_sd_spi_arduino_driver.html#a8d6bc852a52e9d69c4b1e48ee062e8d1">SdSpiArduinoDriver::receive</a>()</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer(0XFF);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">inline</span> uint8_t <a class="code hl_function" href="class_sd_spi_arduino_driver.html#a8d6bc852a52e9d69c4b1e48ee062e8d1">SdSpiArduinoDriver::receive</a>(uint8_t *buf, <span class="keywordtype">size_t</span> count)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#if USE_SPI_ARRAY_TRANSFER</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    memset(buf, 0XFF, count);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer(buf, count);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#else  </span><span class="comment">// USE_SPI_ARRAY_TRANSFER</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; count; i++)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        buf[i] = <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer(0XFF);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif </span><span class="comment">// USE_SPI_ARRAY_TRANSFER</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_arduino_driver.html#a3c4842e47f98fe5d3799cd6028778ab5">SdSpiArduinoDriver::send</a>(uint8_t data)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer(data);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_arduino_driver.html#a3c4842e47f98fe5d3799cd6028778ab5">SdSpiArduinoDriver::send</a>(<span class="keyword">const</span> uint8_t *buf, <span class="keywordtype">size_t</span> count)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#if USE_SPI_ARRAY_TRANSFER</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">if</span> (count &lt;= 512)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        uint8_t tmp[count]; <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        memcpy(tmp, buf, count);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer(tmp, count);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif </span><span class="comment">// USE_SPI_ARRAY_TRANSFER</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; count; i++)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_variable" href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">m_spi</a>-&gt;transfer(buf[i]);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif </span><span class="comment">// SdSpiLibDriver_h</span></div>
+<div class="ttc" id="aclass_sd_spi_arduino_driver_html_a3c4842e47f98fe5d3799cd6028778ab5"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#a3c4842e47f98fe5d3799cd6028778ab5">SdSpiArduinoDriver::send</a></div><div class="ttdeci">void send(uint8_t data)</div><div class="ttdef"><b>Definition</b> SdSpiArtemis.cpp:63</div></div>
+<div class="ttc" id="aclass_sd_spi_arduino_driver_html_a5edbdabf699e1e0e4c9156e02fa1bc34"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#a5edbdabf699e1e0e4c9156e02fa1bc34">SdSpiArduinoDriver::m_spiSettings</a></div><div class="ttdeci">SPISettings m_spiSettings</div><div class="ttdef"><b>Definition</b> SdSpiArduinoDriver.h:88</div></div>
+<div class="ttc" id="aclass_sd_spi_arduino_driver_html_a8d6bc852a52e9d69c4b1e48ee062e8d1"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#a8d6bc852a52e9d69c4b1e48ee062e8d1">SdSpiArduinoDriver::receive</a></div><div class="ttdeci">uint8_t receive()</div><div class="ttdef"><b>Definition</b> SdSpiArtemis.cpp:51</div></div>
 <div class="ttc" id="aclass_sd_spi_arduino_driver_html_abb6b88c5c8b87fc344a69f23f6eab3d9"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#abb6b88c5c8b87fc344a69f23f6eab3d9">SdSpiArduinoDriver::activate</a></div><div class="ttdeci">void activate()</div><div class="ttdef"><b>Definition</b> SdSpiArtemis.cpp:28</div></div>
-<div class="ttc" id="aclass_sd_spi_arduino_driver_html_ac6a423b87d95efe802ddab083623352c"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">SdSpiArduinoDriver::m_spi</a></div><div class="ttdeci">SPIClass * m_spi</div><div class="ttdef"><b>Definition</b> SdSpiArduinoDriver.h:85</div></div>
-<div class="ttc" id="aclass_sd_spi_arduino_driver_html_ae837a6d51bfe5518cb4744581824db88"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#ae837a6d51bfe5518cb4744581824db88">SdSpiArduinoDriver::begin</a></div><div class="ttdeci">void begin(SdSpiConfig spiConfig)</div><div class="ttdef"><b>Definition</b> SdSpiArtemis.cpp:32</div></div>
-<div class="ttc" id="aclass_sd_spi_arduino_driver_html_ae88a255f533e3acb41d1221025a69b55"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#ae88a255f533e3acb41d1221025a69b55">SdSpiArduinoDriver::deactivate</a></div><div class="ttdeci">void deactivate()</div><div class="ttdef"><b>Definition</b> SdSpiArtemis.cpp:41</div></div>
-<div class="ttc" id="aclass_sd_spi_config_html"><div class="ttname"><a href="class_sd_spi_config.html">SdSpiConfig</a></div><div class="ttdoc">SPI card configuration.</div><div class="ttdef"><b>Definition</b> SdSpiDriver.h:104</div></div>
-<div class="ttc" id="aclass_sd_spi_config_html_a0c1797197fbd4e4c4499daf4b51628e6"><div class="ttname"><a href="class_sd_spi_config.html#a0c1797197fbd4e4c4499daf4b51628e6">SdSpiConfig::csPin</a></div><div class="ttdeci">const SdCsPin_t csPin</div><div class="ttdef"><b>Definition</b> SdSpiDriver.h:137</div></div>
-<div class="ttc" id="aclass_sd_spi_config_html_aedaada290c35b55d36671ca377620480"><div class="ttname"><a href="class_sd_spi_config.html#aedaada290c35b55d36671ca377620480">SdSpiConfig::spiPort</a></div><div class="ttdeci">SpiPort_t * spiPort</div><div class="ttdef"><b>Definition</b> SdSpiDriver.h:143</div></div>
+<div class="ttc" id="aclass_sd_spi_arduino_driver_html_ac6a423b87d95efe802ddab083623352c"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#ac6a423b87d95efe802ddab083623352c">SdSpiArduinoDriver::m_spi</a></div><div class="ttdeci">SPIClass * m_spi</div><div class="ttdef"><b>Definition</b> SdSpiArduinoDriver.h:87</div></div>
+<div class="ttc" id="aclass_sd_spi_arduino_driver_html_ae837a6d51bfe5518cb4744581824db88"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#ae837a6d51bfe5518cb4744581824db88">SdSpiArduinoDriver::begin</a></div><div class="ttdeci">void begin(SdSpiConfig spiConfig)</div><div class="ttdef"><b>Definition</b> SdSpiArtemis.cpp:33</div></div>
+<div class="ttc" id="aclass_sd_spi_arduino_driver_html_ae88a255f533e3acb41d1221025a69b55"><div class="ttname"><a href="class_sd_spi_arduino_driver.html#ae88a255f533e3acb41d1221025a69b55">SdSpiArduinoDriver::deactivate</a></div><div class="ttdeci">void deactivate()</div><div class="ttdef"><b>Definition</b> SdSpiArtemis.cpp:46</div></div>
+<div class="ttc" id="aclass_sd_spi_config_html"><div class="ttname"><a href="class_sd_spi_config.html">SdSpiConfig</a></div><div class="ttdoc">SPI card configuration.</div><div class="ttdef"><b>Definition</b> SdSpiDriver.h:112</div></div>
+<div class="ttc" id="aclass_sd_spi_config_html_a0c1797197fbd4e4c4499daf4b51628e6"><div class="ttname"><a href="class_sd_spi_config.html#a0c1797197fbd4e4c4499daf4b51628e6">SdSpiConfig::csPin</a></div><div class="ttdeci">const SdCsPin_t csPin</div><div class="ttdef"><b>Definition</b> SdSpiDriver.h:152</div></div>
+<div class="ttc" id="aclass_sd_spi_config_html_aedaada290c35b55d36671ca377620480"><div class="ttname"><a href="class_sd_spi_config.html#aedaada290c35b55d36671ca377620480">SdSpiConfig::spiPort</a></div><div class="ttdeci">SpiPort_t * spiPort</div><div class="ttdef"><b>Definition</b> SdSpiDriver.h:158</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
@@ -173,7 +188,7 @@ $(document).ready(function(){initNavTree('_sd_spi_lib_driver_8h_source.html','')
     <ul>
         <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c427673be00340ec86d3edee5952f01a.html">SpiDriver</a></li><li class="navelem"><a class="el" href="_sd_spi_lib_driver_8h.html">SdSpiLibDriver.h</a></li>
         <li class="footer">
-            Generated on Wed Aug 16 2023 13:11:27 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
+            Generated on Wed Aug 16 2023 13:16:42 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.9.7.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.

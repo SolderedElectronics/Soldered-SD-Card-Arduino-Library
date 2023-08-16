@@ -104,16 +104,14 @@ $(document).ready(function(){initNavTree('_fs_new_8h_source.html',''); initResiz
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="_fs_new_8h.html#aa858eeb82c4fc91593a63ad62474c1d7">   31</a></span><span class="keyword">typedef</span> uint32_t <a class="code hl_typedef" href="_fs_new_8h.html#aa858eeb82c4fc91593a63ad62474c1d7">newalign_t</a>;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define FS_SIZE(etype, ftype) \</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">  (sizeof(ftype) &lt; sizeof(etype) ? sizeof(etype) : sizeof(ftype))</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define NEW_ALIGN_DIM(n) \</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">  (((size_t)(n) + sizeof(newalign_t) - 1U)/sizeof(newalign_t))</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#define FS_ALIGN_DIM(etype, ftype) NEW_ALIGN_DIM(FS_SIZE(etype, ftype))</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span>* <span class="keyword">operator</span> <span class="keyword">new</span>(<span class="keywordtype">size_t</span> size, <a class="code hl_typedef" href="_fs_new_8h.html#aa858eeb82c4fc91593a63ad62474c1d7">newalign_t</a>* ptr);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif  </span><span class="comment">// FsNew_h</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define FS_SIZE(etype, ftype) (sizeof(ftype) &lt; sizeof(etype) ? sizeof(etype) : sizeof(ftype))</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define NEW_ALIGN_DIM(n) (((size_t)(n) + sizeof(newalign_t) - 1U) / sizeof(newalign_t))</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#define FS_ALIGN_DIM(etype, ftype) NEW_ALIGN_DIM(FS_SIZE(etype, ftype))</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> *<span class="keyword">operator</span> <span class="keyword">new</span>(<span class="keywordtype">size_t</span> size, <a class="code hl_typedef" href="_fs_new_8h.html#aa858eeb82c4fc91593a63ad62474c1d7">newalign_t</a> *ptr);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">// FsNew_h</span></div>
 <div class="ttc" id="a_fs_new_8h_html_aa858eeb82c4fc91593a63ad62474c1d7"><div class="ttname"><a href="_fs_new_8h.html#aa858eeb82c4fc91593a63ad62474c1d7">newalign_t</a></div><div class="ttdeci">uint32_t newalign_t</div><div class="ttdef"><b>Definition</b> FsNew.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -123,7 +121,7 @@ $(document).ready(function(){initNavTree('_fs_new_8h_source.html',''); initResiz
     <ul>
         <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4431f5fff1292ae72a67cc65662e9ee3.html">FsLib</a></li><li class="navelem"><a class="el" href="_fs_new_8h.html">FsNew.h</a></li>
         <li class="footer">
-            Generated on Wed Aug 16 2023 13:11:27 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
+            Generated on Wed Aug 16 2023 13:16:42 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.9.7.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.

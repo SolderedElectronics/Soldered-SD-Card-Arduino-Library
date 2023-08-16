@@ -383,7 +383,7 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:a42aa9a9acb2365652bcb0f266e26e200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc90097077f2147a474123b0942fde70"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fat_file.html#abc90097077f2147a474123b0942fde70">FILE_ATTR_ROOT32</a> = 0X40</td></tr>
 <tr class="separator:abc90097077f2147a474123b0942fde70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e31200f87b9bf094779d2024d91eb81"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fat_file.html#a8e31200f87b9bf094779d2024d91eb81">FILE_ATTR_ROOT</a></td></tr>
+<tr class="memitem:a8e31200f87b9bf094779d2024d91eb81"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fat_file.html#a8e31200f87b9bf094779d2024d91eb81">FILE_ATTR_ROOT</a> = <a class="el" href="class_fat_file.html#a42aa9a9acb2365652bcb0f266e26e200">FILE_ATTR_ROOT_FIXED</a> | <a class="el" href="class_fat_file.html#abc90097077f2147a474123b0942fde70">FILE_ATTR_ROOT32</a></td></tr>
 <tr class="separator:a8e31200f87b9bf094779d2024d91eb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ea3743e913b35de19b14e490b044707"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fat_file.html#a1ea3743e913b35de19b14e490b044707">FILE_ATTR_DIR</a> = <a class="el" href="class_fat_file.html#abfe242bc0d32d9fd6cf0359e8b1ac7d7">FILE_ATTR_SUBDIR</a> | <a class="el" href="class_fat_file.html#a8e31200f87b9bf094779d2024d91eb81">FILE_ATTR_ROOT</a></td></tr>
 <tr class="separator:a1ea3743e913b35de19b14e490b044707"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3793,12 +3793,11 @@ Modify and access timestamps may be overwritten if a date time callback function
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">                       <a class="code hl_variable" href="_fs_structs_8h.html#a0ccc1ee207fc0fd2ca5c62c9d59958d1">FAT_ATTRIB_READ_ONLY</a> | <a class="code hl_variable" href="_fs_structs_8h.html#adbfe632069d19354626b0a1a3e95c58f">FAT_ATTRIB_HIDDEN</a> |</div>
-<div class="line">                       <a class="code hl_variable" href="_fs_structs_8h.html#a202d81a38425b2f5b7e663584db18625">FAT_ATTRIB_SYSTEM</a> | <a class="code hl_variable" href="_fs_structs_8h.html#af29126af21ee040d9228bc2e979e597b">FAT_ATTRIB_DIRECTORY</a></div>
-<div class="ttc" id="a_fs_structs_8h_html_a0ccc1ee207fc0fd2ca5c62c9d59958d1"><div class="ttname"><a href="_fs_structs_8h.html#a0ccc1ee207fc0fd2ca5c62c9d59958d1">FAT_ATTRIB_READ_ONLY</a></div><div class="ttdeci">const uint8_t FAT_ATTRIB_READ_ONLY</div><div class="ttdef"><b>Definition</b> FsStructs.h:213</div></div>
-<div class="ttc" id="a_fs_structs_8h_html_a202d81a38425b2f5b7e663584db18625"><div class="ttname"><a href="_fs_structs_8h.html#a202d81a38425b2f5b7e663584db18625">FAT_ATTRIB_SYSTEM</a></div><div class="ttdeci">const uint8_t FAT_ATTRIB_SYSTEM</div><div class="ttdef"><b>Definition</b> FsStructs.h:215</div></div>
-<div class="ttc" id="a_fs_structs_8h_html_adbfe632069d19354626b0a1a3e95c58f"><div class="ttname"><a href="_fs_structs_8h.html#adbfe632069d19354626b0a1a3e95c58f">FAT_ATTRIB_HIDDEN</a></div><div class="ttdeci">const uint8_t FAT_ATTRIB_HIDDEN</div><div class="ttdef"><b>Definition</b> FsStructs.h:214</div></div>
-<div class="ttc" id="a_fs_structs_8h_html_af29126af21ee040d9228bc2e979e597b"><div class="ttname"><a href="_fs_structs_8h.html#af29126af21ee040d9228bc2e979e597b">FAT_ATTRIB_DIRECTORY</a></div><div class="ttdeci">const uint8_t FAT_ATTRIB_DIRECTORY</div><div class="ttdef"><b>Definition</b> FsStructs.h:217</div></div>
+<div class="line">        <a class="code hl_variable" href="_fs_structs_8h.html#a0ccc1ee207fc0fd2ca5c62c9d59958d1">FAT_ATTRIB_READ_ONLY</a> | <a class="code hl_variable" href="_fs_structs_8h.html#adbfe632069d19354626b0a1a3e95c58f">FAT_ATTRIB_HIDDEN</a> | <a class="code hl_variable" href="_fs_structs_8h.html#a202d81a38425b2f5b7e663584db18625">FAT_ATTRIB_SYSTEM</a> | <a class="code hl_variable" href="_fs_structs_8h.html#af29126af21ee040d9228bc2e979e597b">FAT_ATTRIB_DIRECTORY</a></div>
+<div class="ttc" id="a_fs_structs_8h_html_a0ccc1ee207fc0fd2ca5c62c9d59958d1"><div class="ttname"><a href="_fs_structs_8h.html#a0ccc1ee207fc0fd2ca5c62c9d59958d1">FAT_ATTRIB_READ_ONLY</a></div><div class="ttdeci">const uint8_t FAT_ATTRIB_READ_ONLY</div><div class="ttdef"><b>Definition</b> FsStructs.h:224</div></div>
+<div class="ttc" id="a_fs_structs_8h_html_a202d81a38425b2f5b7e663584db18625"><div class="ttname"><a href="_fs_structs_8h.html#a202d81a38425b2f5b7e663584db18625">FAT_ATTRIB_SYSTEM</a></div><div class="ttdeci">const uint8_t FAT_ATTRIB_SYSTEM</div><div class="ttdef"><b>Definition</b> FsStructs.h:226</div></div>
+<div class="ttc" id="a_fs_structs_8h_html_adbfe632069d19354626b0a1a3e95c58f"><div class="ttname"><a href="_fs_structs_8h.html#adbfe632069d19354626b0a1a3e95c58f">FAT_ATTRIB_HIDDEN</a></div><div class="ttdeci">const uint8_t FAT_ATTRIB_HIDDEN</div><div class="ttdef"><b>Definition</b> FsStructs.h:225</div></div>
+<div class="ttc" id="a_fs_structs_8h_html_af29126af21ee040d9228bc2e979e597b"><div class="ttname"><a href="_fs_structs_8h.html#af29126af21ee040d9228bc2e979e597b">FAT_ATTRIB_DIRECTORY</a></div><div class="ttdeci">const uint8_t FAT_ATTRIB_DIRECTORY</div><div class="ttdef"><b>Definition</b> FsStructs.h:228</div></div>
 </div><!-- fragment --><p>Attributes to copy from directory entry </p>
 
 </div>
@@ -3905,7 +3904,7 @@ Modify and access timestamps may be overwritten if a date time callback function
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const uint8_t FatFile::FILE_ATTR_ROOT</td>
+          <td class="memname">const uint8_t FatFile::FILE_ATTR_ROOT = <a class="el" href="class_fat_file.html#a42aa9a9acb2365652bcb0f266e26e200">FILE_ATTR_ROOT_FIXED</a> | <a class="el" href="class_fat_file.html#abc90097077f2147a474123b0942fde70">FILE_ATTR_ROOT32</a></td>
         </tr>
       </table>
   </td>
@@ -3914,11 +3913,7 @@ Modify and access timestamps may be overwritten if a date time callback function
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">                       <a class="code hl_variable" href="class_fat_file.html#a42aa9a9acb2365652bcb0f266e26e200">FILE_ATTR_ROOT_FIXED</a> | <a class="code hl_variable" href="class_fat_file.html#abc90097077f2147a474123b0942fde70">FILE_ATTR_ROOT32</a></div>
-<div class="ttc" id="aclass_fat_file_html_a42aa9a9acb2365652bcb0f266e26e200"><div class="ttname"><a href="class_fat_file.html#a42aa9a9acb2365652bcb0f266e26e200">FatFile::FILE_ATTR_ROOT_FIXED</a></div><div class="ttdeci">static const uint8_t FILE_ATTR_ROOT_FIXED</div><div class="ttdef"><b>Definition</b> FatFile.h:938</div></div>
-<div class="ttc" id="aclass_fat_file_html_abc90097077f2147a474123b0942fde70"><div class="ttname"><a href="class_fat_file.html#abc90097077f2147a474123b0942fde70">FatFile::FILE_ATTR_ROOT32</a></div><div class="ttdeci">static const uint8_t FILE_ATTR_ROOT32</div><div class="ttdef"><b>Definition</b> FatFile.h:940</div></div>
-</div><!-- fragment --><p>Entry is for root. </p>
+<p>Entry is for root. </p>
 
 </div>
 </div>
@@ -4469,7 +4464,7 @@ Modify and access timestamps may be overwritten if a date time callback function
     <ul>
         <li class="navelem"><a class="el" href="class_fat_file.html">FatFile</a></li>
         <li class="footer">
-            Generated on Wed Aug 16 2023 13:11:27 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
+            Generated on Wed Aug 16 2023 13:16:43 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.9.7.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.

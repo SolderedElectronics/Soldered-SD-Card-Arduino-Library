@@ -107,11 +107,11 @@ Variables</h2></td></tr>
 <tr class="separator:a6280973af57875378c039f8db1a1b65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a532cc9055b0be27adb8c1b80fd705ec8"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fat_formatter_8cpp.html#a532cc9055b0be27adb8c1b80fd705ec8">BYTES_PER_SECTOR</a> = 512</td></tr>
 <tr class="separator:a532cc9055b0be27adb8c1b80fd705ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9662e956505abaf35c6bc29b74a13f71"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fat_formatter_8cpp.html#a9662e956505abaf35c6bc29b74a13f71">SECTORS_PER_MB</a> = 0X100000/<a class="el" href="_ex_fat_formatter_8cpp.html#a532cc9055b0be27adb8c1b80fd705ec8">BYTES_PER_SECTOR</a></td></tr>
+<tr class="memitem:a9662e956505abaf35c6bc29b74a13f71"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fat_formatter_8cpp.html#a9662e956505abaf35c6bc29b74a13f71">SECTORS_PER_MB</a> = 0X100000 / <a class="el" href="_ex_fat_formatter_8cpp.html#a532cc9055b0be27adb8c1b80fd705ec8">BYTES_PER_SECTOR</a></td></tr>
 <tr class="separator:a9662e956505abaf35c6bc29b74a13f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a884119d6577f4d0f1c094a792c2c3ed0"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fat_formatter_8cpp.html#a884119d6577f4d0f1c094a792c2c3ed0">FAT16_ROOT_ENTRY_COUNT</a> = 512</td></tr>
 <tr class="separator:a884119d6577f4d0f1c094a792c2c3ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed0126d991f26bbf471218c20124566c"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fat_formatter_8cpp.html#aed0126d991f26bbf471218c20124566c">FAT16_ROOT_SECTOR_COUNT</a></td></tr>
+<tr class="memitem:aed0126d991f26bbf471218c20124566c"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fat_formatter_8cpp.html#aed0126d991f26bbf471218c20124566c">FAT16_ROOT_SECTOR_COUNT</a> = 32 * <a class="el" href="_fat_formatter_8cpp.html#a884119d6577f4d0f1c094a792c2c3ed0">FAT16_ROOT_ENTRY_COUNT</a> / <a class="el" href="_ex_fat_formatter_8cpp.html#a532cc9055b0be27adb8c1b80fd705ec8">BYTES_PER_SECTOR</a></td></tr>
 <tr class="separator:aed0126d991f26bbf471218c20124566c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -178,15 +178,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const uint16_t FAT16_ROOT_SECTOR_COUNT</td>
+          <td class="memname">const uint16_t FAT16_ROOT_SECTOR_COUNT = 32 * <a class="el" href="_fat_formatter_8cpp.html#a884119d6577f4d0f1c094a792c2c3ed0">FAT16_ROOT_ENTRY_COUNT</a> / <a class="el" href="_ex_fat_formatter_8cpp.html#a532cc9055b0be27adb8c1b80fd705ec8">BYTES_PER_SECTOR</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">               32*<a class="code hl_variable" href="_fat_formatter_8cpp.html#a884119d6577f4d0f1c094a792c2c3ed0">FAT16_ROOT_ENTRY_COUNT</a>/<a class="code hl_variable" href="_fat_formatter_8cpp.html#a532cc9055b0be27adb8c1b80fd705ec8">BYTES_PER_SECTOR</a></div>
-<div class="ttc" id="a_fat_formatter_8cpp_html_a532cc9055b0be27adb8c1b80fd705ec8"><div class="ttname"><a href="_fat_formatter_8cpp.html#a532cc9055b0be27adb8c1b80fd705ec8">BYTES_PER_SECTOR</a></div><div class="ttdeci">const uint16_t BYTES_PER_SECTOR</div><div class="ttdef"><b>Definition</b> FatFormatter.cpp:33</div></div>
-<div class="ttc" id="a_fat_formatter_8cpp_html_a884119d6577f4d0f1c094a792c2c3ed0"><div class="ttname"><a href="_fat_formatter_8cpp.html#a884119d6577f4d0f1c094a792c2c3ed0">FAT16_ROOT_ENTRY_COUNT</a></div><div class="ttdeci">const uint16_t FAT16_ROOT_ENTRY_COUNT</div><div class="ttdef"><b>Definition</b> FatFormatter.cpp:35</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9662e956505abaf35c6bc29b74a13f71" name="a9662e956505abaf35c6bc29b74a13f71"></a>
@@ -196,7 +192,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const uint16_t SECTORS_PER_MB = 0X100000/<a class="el" href="_ex_fat_formatter_8cpp.html#a532cc9055b0be27adb8c1b80fd705ec8">BYTES_PER_SECTOR</a></td>
+          <td class="memname">const uint16_t SECTORS_PER_MB = 0X100000 / <a class="el" href="_ex_fat_formatter_8cpp.html#a532cc9055b0be27adb8c1b80fd705ec8">BYTES_PER_SECTOR</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -211,7 +207,7 @@ Variables</h2></td></tr>
     <ul>
         <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_29f266e24afaa9790bb9523e09394278.html">FatLib</a></li><li class="navelem"><a class="el" href="_fat_formatter_8cpp.html">FatFormatter.cpp</a></li>
         <li class="footer">
-            Generated on Wed Aug 16 2023 13:11:27 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
+            Generated on Wed Aug 16 2023 13:16:42 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.9.7.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.

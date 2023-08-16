@@ -126,7 +126,7 @@ Variables</h2></td></tr>
 <tr class="separator:acd45286b7dfc5ba68be18c8c3a9d298d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63994c21f3b723a55247f063a1b01c9c"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fat_file_8h.html#a63994c21f3b723a55247f063a1b01c9c">FNAME_FLAG_MIXED_CASE</a> = 0X02</td></tr>
 <tr class="separator:a63994c21f3b723a55247f063a1b01c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a041207a19d2fd9a1e2739343ccb29b"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fat_file_8h.html#a1a041207a19d2fd9a1e2739343ccb29b">FNAME_FLAG_NEED_LFN</a></td></tr>
+<tr class="memitem:a1a041207a19d2fd9a1e2739343ccb29b"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fat_file_8h.html#a1a041207a19d2fd9a1e2739343ccb29b">FNAME_FLAG_NEED_LFN</a> = <a class="el" href="_fat_file_8h.html#acd45286b7dfc5ba68be18c8c3a9d298d">FNAME_FLAG_LOST_CHARS</a> | <a class="el" href="_fat_file_8h.html#a63994c21f3b723a55247f063a1b01c9c">FNAME_FLAG_MIXED_CASE</a></td></tr>
 <tr class="separator:a1a041207a19d2fd9a1e2739343ccb29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79e43960e1b4eecf274f5faea9c3168c"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fat_file_8h.html#a79e43960e1b4eecf274f5faea9c3168c">FNAME_FLAG_LC_BASE</a> = <a class="el" href="_fs_structs_8h.html#a836cddecc6c1ebb3dde531a277e2846d">FAT_CASE_LC_BASE</a></td></tr>
 <tr class="separator:a79e43960e1b4eecf274f5faea9c3168c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,15 +203,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const uint8_t FNAME_FLAG_NEED_LFN</td>
+          <td class="memname">const uint8_t FNAME_FLAG_NEED_LFN = <a class="el" href="_fat_file_8h.html#acd45286b7dfc5ba68be18c8c3a9d298d">FNAME_FLAG_LOST_CHARS</a> | <a class="el" href="_fat_file_8h.html#a63994c21f3b723a55247f063a1b01c9c">FNAME_FLAG_MIXED_CASE</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">  <a class="code hl_variable" href="_fat_file_8h.html#acd45286b7dfc5ba68be18c8c3a9d298d">FNAME_FLAG_LOST_CHARS</a> | <a class="code hl_variable" href="_fat_file_8h.html#a63994c21f3b723a55247f063a1b01c9c">FNAME_FLAG_MIXED_CASE</a></div>
-<div class="ttc" id="a_fat_file_8h_html_a63994c21f3b723a55247f063a1b01c9c"><div class="ttname"><a href="_fat_file_8h.html#a63994c21f3b723a55247f063a1b01c9c">FNAME_FLAG_MIXED_CASE</a></div><div class="ttdeci">const uint8_t FNAME_FLAG_MIXED_CASE</div><div class="ttdef"><b>Definition</b> FatFile.h:97</div></div>
-<div class="ttc" id="a_fat_file_8h_html_acd45286b7dfc5ba68be18c8c3a9d298d"><div class="ttname"><a href="_fat_file_8h.html#acd45286b7dfc5ba68be18c8c3a9d298d">FNAME_FLAG_LOST_CHARS</a></div><div class="ttdeci">const uint8_t FNAME_FLAG_LOST_CHARS</div><div class="ttdef"><b>Definition</b> FatFile.h:95</div></div>
-</div><!-- fragment --><p>LFN entries are required for file name. </p>
+<p>LFN entries are required for file name. </p>
 
 </div>
 </div>
@@ -223,7 +219,7 @@ Variables</h2></td></tr>
     <ul>
         <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_29f266e24afaa9790bb9523e09394278.html">FatLib</a></li><li class="navelem"><a class="el" href="_fat_file_8h.html">FatFile.h</a></li>
         <li class="footer">
-            Generated on Wed Aug 16 2023 13:11:27 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
+            Generated on Wed Aug 16 2023 13:16:42 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.9.7.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.

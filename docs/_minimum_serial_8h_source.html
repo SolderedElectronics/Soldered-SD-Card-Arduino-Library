@@ -101,25 +101,29 @@ $(document).ready(function(){initNavTree('_minimum_serial_8h_source.html',''); i
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define MinimumSerial_h</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="_sys_call_8h.html">common/SysCall.h</a>&quot;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">//==============================================================================</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_minimum_serial.html">   37</a></span><span class="comment"></span><span class="keyword">class </span><a class="code hl_class" href="class_minimum_serial.html">MinimumSerial</a> : <span class="keyword">public</span> <a class="code hl_typedef" href="_sys_call_8h.html#ab4f210a7e2149c6c531486f1713c647b">print_t</a> {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_minimum_serial.html#a73a1a2a92604ecb8507afde0022aedd8">   40</a></span>  <span class="keyword">operator</span> bool() {<span class="keywordflow">return</span> <span class="keyword">true</span>;}</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_minimum_serial.html#a2abe4370989968938b5dc4872d51c3df">available</a>();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_minimum_serial.html#a5c56beb3472bb97f949defeecacda52c">begin</a>(uint32_t baud);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_minimum_serial.html#a872f0ff70f0e256352004f83d13fff28">flush</a>();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_minimum_serial.html#a4890dd60f2ffb61eba0821cc80d411ad">read</a>();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_minimum_serial.html#a0ca1d9631fe5f2f00878bd481dbbd3aa">write</a>(uint8_t b);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keyword">using </span>print_t::write;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif  </span><span class="comment">// MinimumSerial_h</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_minimum_serial.html">   37</a></span><span class="comment"></span><span class="keyword">class </span><a class="code hl_class" href="class_minimum_serial.html">MinimumSerial</a> : <span class="keyword">public</span> <a class="code hl_typedef" href="_sys_call_8h.html#ab4f210a7e2149c6c531486f1713c647b">print_t</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_minimum_serial.html#a73a1a2a92604ecb8507afde0022aedd8">   41</a></span>    <span class="keyword">operator</span> bool()</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_minimum_serial.html#a2abe4370989968938b5dc4872d51c3df">available</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_minimum_serial.html#a5c56beb3472bb97f949defeecacda52c">begin</a>(uint32_t baud);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_minimum_serial.html#a872f0ff70f0e256352004f83d13fff28">flush</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_minimum_serial.html#a4890dd60f2ffb61eba0821cc80d411ad">read</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_minimum_serial.html#a0ca1d9631fe5f2f00878bd481dbbd3aa">write</a>(uint8_t b);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">using </span>print_t::write;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif </span><span class="comment">// MinimumSerial_h</span></div>
 <div class="ttc" id="a_sys_call_8h_html"><div class="ttname"><a href="_sys_call_8h.html">SysCall.h</a></div><div class="ttdoc">SysCall class.</div></div>
-<div class="ttc" id="a_sys_call_8h_html_ab4f210a7e2149c6c531486f1713c647b"><div class="ttname"><a href="_sys_call_8h.html#ab4f210a7e2149c6c531486f1713c647b">print_t</a></div><div class="ttdeci">Print print_t</div><div class="ttdef"><b>Definition</b> SysCall.h:63</div></div>
-<div class="ttc" id="aclass_minimum_serial_html"><div class="ttname"><a href="class_minimum_serial.html">MinimumSerial</a></div><div class="ttdoc">mini serial class for the SdFat library.</div><div class="ttdef"><b>Definition</b> MinimumSerial.h:37</div></div>
-<div class="ttc" id="aclass_minimum_serial_html_a0ca1d9631fe5f2f00878bd481dbbd3aa"><div class="ttname"><a href="class_minimum_serial.html#a0ca1d9631fe5f2f00878bd481dbbd3aa">MinimumSerial::write</a></div><div class="ttdeci">size_t write(uint8_t b)</div><div class="ttdef"><b>Definition</b> MinimumSerial.cpp:66</div></div>
+<div class="ttc" id="a_sys_call_8h_html_ab4f210a7e2149c6c531486f1713c647b"><div class="ttname"><a href="_sys_call_8h.html#ab4f210a7e2149c6c531486f1713c647b">print_t</a></div><div class="ttdeci">Print print_t</div><div class="ttdef"><b>Definition</b> SysCall.h:66</div></div>
+<div class="ttc" id="aclass_minimum_serial_html"><div class="ttname"><a href="class_minimum_serial.html">MinimumSerial</a></div><div class="ttdoc">mini serial class for the SdFat library.</div><div class="ttdef"><b>Definition</b> MinimumSerial.h:38</div></div>
+<div class="ttc" id="aclass_minimum_serial_html_a0ca1d9631fe5f2f00878bd481dbbd3aa"><div class="ttname"><a href="class_minimum_serial.html#a0ca1d9631fe5f2f00878bd481dbbd3aa">MinimumSerial::write</a></div><div class="ttdeci">size_t write(uint8_t b)</div><div class="ttdef"><b>Definition</b> MinimumSerial.cpp:76</div></div>
 <div class="ttc" id="aclass_minimum_serial_html_a2abe4370989968938b5dc4872d51c3df"><div class="ttname"><a href="class_minimum_serial.html#a2abe4370989968938b5dc4872d51c3df">MinimumSerial::available</a></div><div class="ttdeci">int available()</div><div class="ttdef"><b>Definition</b> MinimumSerial.cpp:30</div></div>
-<div class="ttc" id="aclass_minimum_serial_html_a4890dd60f2ffb61eba0821cc80d411ad"><div class="ttname"><a href="class_minimum_serial.html#a4890dd60f2ffb61eba0821cc80d411ad">MinimumSerial::read</a></div><div class="ttdeci">int read()</div><div class="ttdef"><b>Definition</b> MinimumSerial.cpp:59</div></div>
-<div class="ttc" id="aclass_minimum_serial_html_a5c56beb3472bb97f949defeecacda52c"><div class="ttname"><a href="class_minimum_serial.html#a5c56beb3472bb97f949defeecacda52c">MinimumSerial::begin</a></div><div class="ttdeci">void begin(uint32_t baud)</div><div class="ttdef"><b>Definition</b> MinimumSerial.cpp:34</div></div>
-<div class="ttc" id="aclass_minimum_serial_html_a872f0ff70f0e256352004f83d13fff28"><div class="ttname"><a href="class_minimum_serial.html#a872f0ff70f0e256352004f83d13fff28">MinimumSerial::flush</a></div><div class="ttdeci">void flush()</div><div class="ttdef"><b>Definition</b> MinimumSerial.cpp:55</div></div>
+<div class="ttc" id="aclass_minimum_serial_html_a4890dd60f2ffb61eba0821cc80d411ad"><div class="ttname"><a href="class_minimum_serial.html#a4890dd60f2ffb61eba0821cc80d411ad">MinimumSerial::read</a></div><div class="ttdeci">int read()</div><div class="ttdef"><b>Definition</b> MinimumSerial.cpp:67</div></div>
+<div class="ttc" id="aclass_minimum_serial_html_a5c56beb3472bb97f949defeecacda52c"><div class="ttname"><a href="class_minimum_serial.html#a5c56beb3472bb97f949defeecacda52c">MinimumSerial::begin</a></div><div class="ttdeci">void begin(uint32_t baud)</div><div class="ttdef"><b>Definition</b> MinimumSerial.cpp:35</div></div>
+<div class="ttc" id="aclass_minimum_serial_html_a872f0ff70f0e256352004f83d13fff28"><div class="ttname"><a href="class_minimum_serial.html#a872f0ff70f0e256352004f83d13fff28">MinimumSerial::flush</a></div><div class="ttdeci">void flush()</div><div class="ttdef"><b>Definition</b> MinimumSerial.cpp:60</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
@@ -128,7 +132,7 @@ $(document).ready(function(){initNavTree('_minimum_serial_8h_source.html',''); i
     <ul>
         <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_minimum_serial_8h.html">MinimumSerial.h</a></li>
         <li class="footer">
-            Generated on Wed Aug 16 2023 13:11:27 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
+            Generated on Wed Aug 16 2023 13:16:42 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.9.7.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.

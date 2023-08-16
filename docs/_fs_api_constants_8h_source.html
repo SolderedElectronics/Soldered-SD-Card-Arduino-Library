@@ -115,51 +115,52 @@ $(document).ready(function(){initNavTree('_fs_api_constants_8h_source.html','');
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> * O_SYNC:     0x2000</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"> * O_NONBLOCK: 0x4000</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#define O_AT_END O_NONBLOCK  </span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#define O_AT_END O_NONBLOCK </span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">   45</a></span><span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code hl_typedef" href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#else  </span><span class="comment">// USE_FCNTL_H</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#define O_RDONLY  0X00  </span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#define O_WRONLY  0X01  </span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#define O_RDWR    0X02  </span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#define O_AT_END  0X04  </span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#define O_APPEND  0X08  </span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define O_CREAT   0x10  </span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define O_TRUNC   0x20  </span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define O_EXCL    0x40  </span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#define O_SYNC    0x80  </span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#else                 </span><span class="comment">// USE_FCNTL_H</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#define O_RDONLY 0X00 </span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#define O_WRONLY 0X01 </span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#define O_RDWR   0X02 </span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#define O_AT_END 0X04 </span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#define O_APPEND 0X08 </span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define O_CREAT  0x10 </span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define O_TRUNC  0x20 </span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define O_EXCL   0x40 </span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#define O_SYNC   0x80 </span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define O_ACCMODE (O_RDONLY|O_WRONLY|O_RDWR)  </span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define O_ACCMODE (O_RDONLY | O_WRONLY | O_RDWR) </span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">typedef</span> uint8_t <a class="code hl_typedef" href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif  </span><span class="comment">// USE_FCNTL_H</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif                                           </span><span class="comment">// USE_FCNTL_H</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#define O_READ    O_RDONLY</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#define O_WRITE   O_WRONLY</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#define O_READ  O_RDONLY</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#define O_WRITE O_WRONLY</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a845616b133a32a76247c96aea31c4d4c">   64</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="_fs_api_constants_8h.html#a845616b133a32a76247c96aea31c4d4c">isWriteMode</a>(<a class="code hl_typedef" href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a> oflag) {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  oflag &amp;= O_ACCMODE;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordflow">return</span> oflag == O_WRONLY || oflag == O_RDWR;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">// flags for ls()</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#ac267f2fcbe87337b3742be3ad3226f60">   71</a></span><span class="comment"></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#ac267f2fcbe87337b3742be3ad3226f60">LS_A</a> = 1;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#ad203c5336bda4be65d209eb226ad0541">   73</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#ad203c5336bda4be65d209eb226ad0541">LS_DATE</a> = 2;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a8418da03a9d0bec43de84dbcf8b91de4">   75</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#a8418da03a9d0bec43de84dbcf8b91de4">LS_SIZE</a> = 4;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a82b7ef4a94716ec4f7d33f673587979f">   77</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#a82b7ef4a94716ec4f7d33f673587979f">LS_R</a> = 8;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">// flags for time-stamp</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a7a6a8146d9d92341119e812a9ab8d473">   81</a></span><span class="comment"></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#a7a6a8146d9d92341119e812a9ab8d473">T_ACCESS</a> = 1;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a2b9f8d9da1508fd4f71381d08a237599">   83</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#a2b9f8d9da1508fd4f71381d08a237599">T_CREATE</a> = 2;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a685f1d1c1f74eb85c55b8131752526ab">   85</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#a685f1d1c1f74eb85c55b8131752526ab">T_WRITE</a> = 4;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif  </span><span class="comment">// FsApiConstants_h</span></div>
-<div class="ttc" id="a_fs_api_constants_8h_html_a2b9f8d9da1508fd4f71381d08a237599"><div class="ttname"><a href="_fs_api_constants_8h.html#a2b9f8d9da1508fd4f71381d08a237599">T_CREATE</a></div><div class="ttdeci">const uint8_t T_CREATE</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:83</div></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a845616b133a32a76247c96aea31c4d4c">   64</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="_fs_api_constants_8h.html#a845616b133a32a76247c96aea31c4d4c">isWriteMode</a>(<a class="code hl_typedef" href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a> oflag)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    oflag &amp;= O_ACCMODE;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> oflag == O_WRONLY || oflag == O_RDWR;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">// flags for ls()</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#ac267f2fcbe87337b3742be3ad3226f60">   72</a></span><span class="comment"></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#ac267f2fcbe87337b3742be3ad3226f60">LS_A</a> = 1;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#ad203c5336bda4be65d209eb226ad0541">   74</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#ad203c5336bda4be65d209eb226ad0541">LS_DATE</a> = 2;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a8418da03a9d0bec43de84dbcf8b91de4">   76</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#a8418da03a9d0bec43de84dbcf8b91de4">LS_SIZE</a> = 4;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a82b7ef4a94716ec4f7d33f673587979f">   78</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#a82b7ef4a94716ec4f7d33f673587979f">LS_R</a> = 8;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">// flags for time-stamp</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a7a6a8146d9d92341119e812a9ab8d473">   82</a></span><span class="comment"></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#a7a6a8146d9d92341119e812a9ab8d473">T_ACCESS</a> = 1;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a2b9f8d9da1508fd4f71381d08a237599">   84</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#a2b9f8d9da1508fd4f71381d08a237599">T_CREATE</a> = 2;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="_fs_api_constants_8h.html#a685f1d1c1f74eb85c55b8131752526ab">   86</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="_fs_api_constants_8h.html#a685f1d1c1f74eb85c55b8131752526ab">T_WRITE</a> = 4;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif </span><span class="comment">// FsApiConstants_h</span></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a2b9f8d9da1508fd4f71381d08a237599"><div class="ttname"><a href="_fs_api_constants_8h.html#a2b9f8d9da1508fd4f71381d08a237599">T_CREATE</a></div><div class="ttdeci">const uint8_t T_CREATE</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:84</div></div>
 <div class="ttc" id="a_fs_api_constants_8h_html_a39cbe71da20b3a35100d369620187d4f"><div class="ttname"><a href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a></div><div class="ttdeci">int oflag_t</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:45</div></div>
-<div class="ttc" id="a_fs_api_constants_8h_html_a685f1d1c1f74eb85c55b8131752526ab"><div class="ttname"><a href="_fs_api_constants_8h.html#a685f1d1c1f74eb85c55b8131752526ab">T_WRITE</a></div><div class="ttdeci">const uint8_t T_WRITE</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:85</div></div>
-<div class="ttc" id="a_fs_api_constants_8h_html_a7a6a8146d9d92341119e812a9ab8d473"><div class="ttname"><a href="_fs_api_constants_8h.html#a7a6a8146d9d92341119e812a9ab8d473">T_ACCESS</a></div><div class="ttdeci">const uint8_t T_ACCESS</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:81</div></div>
-<div class="ttc" id="a_fs_api_constants_8h_html_a82b7ef4a94716ec4f7d33f673587979f"><div class="ttname"><a href="_fs_api_constants_8h.html#a82b7ef4a94716ec4f7d33f673587979f">LS_R</a></div><div class="ttdeci">const uint8_t LS_R</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:77</div></div>
-<div class="ttc" id="a_fs_api_constants_8h_html_a8418da03a9d0bec43de84dbcf8b91de4"><div class="ttname"><a href="_fs_api_constants_8h.html#a8418da03a9d0bec43de84dbcf8b91de4">LS_SIZE</a></div><div class="ttdeci">const uint8_t LS_SIZE</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:75</div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a685f1d1c1f74eb85c55b8131752526ab"><div class="ttname"><a href="_fs_api_constants_8h.html#a685f1d1c1f74eb85c55b8131752526ab">T_WRITE</a></div><div class="ttdeci">const uint8_t T_WRITE</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:86</div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a7a6a8146d9d92341119e812a9ab8d473"><div class="ttname"><a href="_fs_api_constants_8h.html#a7a6a8146d9d92341119e812a9ab8d473">T_ACCESS</a></div><div class="ttdeci">const uint8_t T_ACCESS</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:82</div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a82b7ef4a94716ec4f7d33f673587979f"><div class="ttname"><a href="_fs_api_constants_8h.html#a82b7ef4a94716ec4f7d33f673587979f">LS_R</a></div><div class="ttdeci">const uint8_t LS_R</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:78</div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a8418da03a9d0bec43de84dbcf8b91de4"><div class="ttname"><a href="_fs_api_constants_8h.html#a8418da03a9d0bec43de84dbcf8b91de4">LS_SIZE</a></div><div class="ttdeci">const uint8_t LS_SIZE</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:76</div></div>
 <div class="ttc" id="a_fs_api_constants_8h_html_a845616b133a32a76247c96aea31c4d4c"><div class="ttname"><a href="_fs_api_constants_8h.html#a845616b133a32a76247c96aea31c4d4c">isWriteMode</a></div><div class="ttdeci">bool isWriteMode(oflag_t oflag)</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:64</div></div>
-<div class="ttc" id="a_fs_api_constants_8h_html_ac267f2fcbe87337b3742be3ad3226f60"><div class="ttname"><a href="_fs_api_constants_8h.html#ac267f2fcbe87337b3742be3ad3226f60">LS_A</a></div><div class="ttdeci">const uint8_t LS_A</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:71</div></div>
-<div class="ttc" id="a_fs_api_constants_8h_html_ad203c5336bda4be65d209eb226ad0541"><div class="ttname"><a href="_fs_api_constants_8h.html#ad203c5336bda4be65d209eb226ad0541">LS_DATE</a></div><div class="ttdeci">const uint8_t LS_DATE</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:73</div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_ac267f2fcbe87337b3742be3ad3226f60"><div class="ttname"><a href="_fs_api_constants_8h.html#ac267f2fcbe87337b3742be3ad3226f60">LS_A</a></div><div class="ttdeci">const uint8_t LS_A</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:72</div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_ad203c5336bda4be65d209eb226ad0541"><div class="ttname"><a href="_fs_api_constants_8h.html#ad203c5336bda4be65d209eb226ad0541">LS_DATE</a></div><div class="ttdeci">const uint8_t LS_DATE</div><div class="ttdef"><b>Definition</b> FsApiConstants.h:74</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
@@ -168,7 +169,7 @@ $(document).ready(function(){initNavTree('_fs_api_constants_8h_source.html','');
     <ul>
         <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="_fs_api_constants_8h.html">FsApiConstants.h</a></li>
         <li class="footer">
-            Generated on Wed Aug 16 2023 13:11:27 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
+            Generated on Wed Aug 16 2023 13:16:42 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.9.7.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.

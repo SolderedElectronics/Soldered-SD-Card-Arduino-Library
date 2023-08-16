@@ -125,9 +125,9 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:aa4dc30fbf564f28d6d9697d0c8e901a4"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fmt_number_8cpp.html#aa4dc30fbf564f28d6d9697d0c8e901a4">powTen</a> [] = {1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8, 1e9}</td></tr>
 <tr class="separator:aa4dc30fbf564f28d6d9697d0c8e901a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80ecbfd2009b40507a3a4c7d07147441"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fmt_number_8cpp.html#a80ecbfd2009b40507a3a4c7d07147441">rnd</a> []</td></tr>
+<tr class="memitem:a80ecbfd2009b40507a3a4c7d07147441"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fmt_number_8cpp.html#a80ecbfd2009b40507a3a4c7d07147441">rnd</a> [] = {5e-1, 5e-2, 5e-3, 5e-4, 5e-5, 5e-6, 5e-7, 5e-8, 5e-9, 5e-10}</td></tr>
 <tr class="separator:a80ecbfd2009b40507a3a4c7d07147441"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a966eb46817ddf804e813d94657139295"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fmt_number_8cpp.html#a966eb46817ddf804e813d94657139295">MAX_PREC</a> = sizeof(<a class="el" href="_fmt_number_8cpp.html#aa4dc30fbf564f28d6d9697d0c8e901a4">powTen</a>)/sizeof(<a class="el" href="_fmt_number_8cpp.html#aa4dc30fbf564f28d6d9697d0c8e901a4">powTen</a>[0])</td></tr>
+<tr class="memitem:a966eb46817ddf804e813d94657139295"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fmt_number_8cpp.html#a966eb46817ddf804e813d94657139295">MAX_PREC</a> = sizeof(<a class="el" href="_fmt_number_8cpp.html#aa4dc30fbf564f28d6d9697d0c8e901a4">powTen</a>) / sizeof(<a class="el" href="_fmt_number_8cpp.html#aa4dc30fbf564f28d6d9697d0c8e901a4">powTen</a>[0])</td></tr>
 <tr class="separator:a966eb46817ddf804e813d94657139295"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecdda5e827a74971366eace43587861d"><td class="memItemLeft" align="right" valign="top">static const float <a class="el" href="_fmt_number_8cpp.html#a51e2380ea0ddf09e95010936d26eaf5b">m</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_fmt_number_8cpp.html#aecdda5e827a74971366eace43587861d">PROGMEM</a> = {1e-1, 1e-2, 1e-4, 1e-8, 1e-16, 1e-32}</td></tr>
 <tr class="separator:aecdda5e827a74971366eace43587861d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -486,7 +486,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const size_t MAX_PREC = sizeof(<a class="el" href="_fmt_number_8cpp.html#aa4dc30fbf564f28d6d9697d0c8e901a4">powTen</a>)/sizeof(<a class="el" href="_fmt_number_8cpp.html#aa4dc30fbf564f28d6d9697d0c8e901a4">powTen</a>[0])</td>
+          <td class="memname">const size_t MAX_PREC = sizeof(<a class="el" href="_fmt_number_8cpp.html#aa4dc30fbf564f28d6d9697d0c8e901a4">powTen</a>) / sizeof(<a class="el" href="_fmt_number_8cpp.html#aa4dc30fbf564f28d6d9697d0c8e901a4">powTen</a>[0])</td>
         </tr>
       </table>
   </td>
@@ -574,7 +574,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double rnd[]</td>
+          <td class="memname">const double rnd[] = {5e-1, 5e-2, 5e-3, 5e-4, 5e-5, 5e-6, 5e-7, 5e-8, 5e-9, 5e-10}</td>
         </tr>
       </table>
   </td>
@@ -583,9 +583,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">  {5e-1, 5e-2, 5e-3, 5e-4, 5e-5, 5e-6, 5e-7, 5e-8, 5e-9, 5e-10}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->
@@ -596,7 +594,7 @@ Variables</h2></td></tr>
     <ul>
         <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="_fmt_number_8cpp.html">FmtNumber.cpp</a></li>
         <li class="footer">
-            Generated on Wed Aug 16 2023 13:11:27 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
+            Generated on Wed Aug 16 2023 13:16:42 for Soldered SD Card Arduino Library by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.9.7.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.
