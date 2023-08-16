@@ -1,14 +1,13 @@
-# NAZIV PROIZVODA Arduino library
+# Soldered microSD Card Breakout Arduino library
 
-[![Make docs and publish to GitHub Pages](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/make_docs.yml)
-[![Arduino Library Manager Compatibility](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/arduino_lint.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/arduino_lint.yml)
-[![ATtiny Firmware Compile Test](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/attiny_test.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/attiny_test.yml)
+[![Make docs and publish to GitHub Pages](https://github.com/SolderedElectronics/Soldered-SD-Card-Arduino-Library/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/Soldered-SD-Card-Arduino-Library/actions/workflows/make_docs.yml)
+[![Arduino Library Manager Compatibility](https://github.com/SolderedElectronics/Soldered-SD-Card-Arduino-Library/actions/workflows/arduino_lint.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/Soldered-SD-Card-Arduino-Library/actions/workflows/arduino_lint.yml)
 
 | ![Product name](https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg) |
 | :------------------------------------------------------------------------------------: |
-|                      [NAZIV PROIZVODA](https://www.solde.red/SKU)                      |
+|                      [Soldered micro SD Card Breakout](https://www.solde.red/333050)                      |
 
-OPIS PROIZVODA + LINK NA [easyC ecosystem](https://www.soldered.com/en/easyC).
+OPIS PROIZVODA
 
 ### Repository Contents
 
@@ -18,20 +17,20 @@ OPIS PROIZVODA + LINK NA [easyC ecosystem](https://www.soldered.com/en/easyC).
 
 ### Hardware design
 
-You can find hardware design for this board in _NAZIV PROIZVODA_ hardware repository.
+You can find hardware design for this board in _Soldered microSD Card Breakout_ hardware repository.
 
 ### Documentation
 
 Access Arduino library documentation [here](https://SolderedElectronics.github.io/Soldered-Generic-Arduino-Library/).
 
-- Tutorial for using the NAZIV PROIZVODA board
+- Tutorial for using the Soldered microSD Card Breakout board
 - Installing an Arduino library
 
 ### Board compatibility
 
 The library is compatible with board & microcontroller families shown in green below:
 
-[![Compile Sketches](http://github-actions.40ants.com/SolderedElectronics/Soldered-Generic-Arduino-Library/matrix.svg?branch=dev&only=Compile%20Sketches)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/compile_test.yml)
+[![Compile Sketches](http://github-actions.40ants.com/SolderedElectronics/Soldered-Generic-Arduino-Library/matrix.svg?branch=dev&only=Compile%20Sketches)](https://github.com/SolderedElectronics/Soldered-SD-Card-Arduino-Library/actions/workflows/compile_test.yml)
 
 ### About Soldered
 
@@ -44,9 +43,8 @@ At Soldered, we design and manufacture a wide selection of electronic products t
 - [Community & Technical support](https://soldered.com/community)
 
 ### Original source
-
 ​
-This library is possible thanks to original [arduino-mcp23017](https://github.com/blemasle/arduino-mcp23017) library. Thank you, blemasle.
+This library is possible thanks to original [SdFat](https://github.com/greiman/SdFat) library. Thank you, Bill.
 
 ### Open-source license
 
