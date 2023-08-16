@@ -32,7 +32,7 @@ typedef uint16_t ExChar16_t;
 //  #error C++11 Support required
 #else  // __cplusplus < 201103
 typedef char16_t ExChar16_t;
-#endif  // __cplusplus < 201103
+#endif // __cplusplus < 201103
 
 #if USE_EXFAT_UNICODE_NAMES
 /** exFAT API character type */
@@ -40,17 +40,18 @@ typedef ExChar16_t ExChar_t;
 #else  // USE_EXFAT_UNICODE_NAMES
 /** exFAT API character type */
 typedef char ExChar_t;
-#endif  // USE_EXFAT_UNICODE_NAMES
+#endif // USE_EXFAT_UNICODE_NAMES
 /**
  * \struct DirPos_t
  * \brief Internal type for position in directory file.
  */
-struct DirPos_t {
-  /** current cluster */
-  uint32_t cluster;
-  /** offset */
-  uint32_t position;
-  /** directory is contiguous */
-  bool     isContiguous;
+struct DirPos_t
+{
+    /** current cluster */
+    uint32_t cluster;
+    /** offset */
+    uint32_t position;
+    /** directory is contiguous */
+    bool isContiguous;
 };
-#endif  // ExFatTypes_h
+#endif // ExFatTypes_h

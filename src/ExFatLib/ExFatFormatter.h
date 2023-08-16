@@ -24,35 +24,37 @@
  */
 #ifndef ExFatFormatter_h
 #define ExFatFormatter_h
-#include "ExFatConfig.h"
-#include "../common/SysCall.h"
 #include "../common/BlockDevice.h"
+#include "../common/SysCall.h"
+#include "ExFatConfig.h"
 #include "upcase.h"
 /**
  * \class ExFatFormatter
  * \brief Format an exFAT volume.
  */
-class ExFatFormatter {
- public:
-  /**
-   * Format an exFAT volume.
-   *
-   * \param[in] dev Block device for volume.
-   * \param[in] secBuf buffer for writing to volume.
-   * \param[in] pr Print device for progress output.
-   *
-   * \return true for success or false for failure.
-   */
-  bool format(BlockDevice* dev, uint8_t* secBuf, print_t* pr = nullptr);
- private:
-  bool syncUpcase();
-  bool writeUpcase(uint32_t sector);
-  bool writeUpcaseByte(uint8_t b);
-  bool writeUpcaseUnicode(uint16_t unicode);
-  uint32_t m_upcaseSector;
-  uint32_t m_upcaseChecksum;
-  uint32_t m_upcaseSize;
-  BlockDevice* m_dev;
-  uint8_t* m_secBuf;
+class ExFatFormatter
+{
+  public:
+    /**
+     * Format an exFAT volume.
+     *
+     * \param[in] dev Block device for volume.
+     * \param[in] secBuf buffer for writing to volume.
+     * \param[in] pr Print device for progress output.
+     *
+     * \return true for success or false for failure.
+     */
+    bool format(BlockDevice *dev, uint8_t *secBuf, print_t *pr = nullptr);
+
+  private:
+    bool syncUpcase();
+    bool writeUpcase(uint32_t sector);
+    bool writeUpcaseByte(uint8_t b);
+    bool writeUpcaseUnicode(uint16_t unicode);
+    uint32_t m_upcaseSector;
+    uint32_t m_upcaseChecksum;
+    uint32_t m_upcaseSize;
+    BlockDevice *m_dev;
+    uint8_t *m_secBuf;
 };
-#endif  // ExFatFormatter_h
+#endif // ExFatFormatter_h

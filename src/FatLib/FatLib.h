@@ -24,7 +24,7 @@
  */
 #ifndef FatLib_h
 #define FatLib_h
-#include "FatVolume.h"
-#include "FatLibConfig.h"
 #include "FatFormatter.h"
-#endif  // FatLib_h
+#include "FatLibConfig.h"
+#include "FatVolume.h"
+#endif // FatLib_h
