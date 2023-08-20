@@ -25,7 +25,7 @@ You can find hardware design for this board in _Soldered microSD Card Breakout_ 
 
 ### Documentation
 
-Access Arduino library documentation [here](https://SolderedElectronics.github.io/Soldered-Generic-Arduino-Library/).
+Access Arduino library documentation [here](https://SolderedElectronics.github.io/Soldered-microSD-Card-Reader-Breakout-Arduino-Library/).
 
 - Tutorial for using the Soldered microSD Card Breakout board
 - Installing an Arduino library
