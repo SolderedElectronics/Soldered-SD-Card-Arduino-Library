@@ -26,12 +26,6 @@ Access Arduino library documentation [here](https://SolderedElectronics.github.i
 - Tutorial for using the Soldered microSD Card Breakout board
 - Installing an Arduino library
 
-### Board compatibility
-
-The library is compatible with board & microcontroller families shown in green below:
-
-[![Compile Sketches](http://github-actions.40ants.com/SolderedElectronics/Soldered-SD-Card-Arduino-Library/matrix.svg?branch=dev&only=Compile%20Sketches)](https://github.com/SolderedElectronics/Soldered-SD-Card-Arduino-Library/actions/workflows/compile_test.yml)
-
 ### About Soldered
 
 <img src="https://raw.githubusercontent.com/SolderedElectronics/Soldered-SD-Card-Arduino-Library/dev/extras/Soldered-logo-color.png" alt="soldered-logo" width="500"/>
