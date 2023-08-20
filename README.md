@@ -9,6 +9,10 @@
 
 OPIS PROIZVODA
 
+### Information
+
+This repository is a fork of the [exsiting SDFat Arduino Library by Bill Greiman](https://github.com/greiman/SdFat). It's version 2 of the library, so it supports FAT16/FAT32 and exFAT SD cards. It is mostly backward compatible with SdFat Version 1 for FAT16/FAT32 cards. For more technical information, please refer to _INFO.md_ in this repository.
+
 ### Repository Contents
 
 - **/src** - source files for the library (.h & .cpp)
